@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Employee Payroll Home</title>
+    <link rel="stylesheet" href="../CSS/EmpPayrollDahboard.css">
+</head>
+
+<body>
+
+    <header class="header-content header" id="headerID">
+        <div class="logo-content">
+            <img src="../Images/logo.png" alt="">
+            <div>
+                <span class="emp-text">
+                    EMPLOYEE
+                </span>
+                <br>
+                <sapn class="emp-text emp-payroll">PAYROLL</sapn>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="header-content">
+            <div class="emp-detail-text">
+                Employee Details <div class="emp-count"></div>
+            </div>
+            <a href="./EmployeePayrollUI.html" class="add-button">
+                <img src="../Images/icons8-add-24.png" alt=""> Add User
+            </a>
+        </div>
+
+        <table id="display" class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="emp-info">
+                        <img src="../Images/profile1.png" alt="Employee" class="emp-img" />
+                        <spna>Amarpa Shashanka Keerthi Kumar</spna>
+                    </td>
+                    <td>Female</td>
+                    <td>
+                        <span class="dept-label">Sales</span>
+                        <span class="dept-label">HR</span>
+                        <span class="dept-label">Finance</span>
+                    </td>
+                    <td>₹ 10,000</td>
+                    <td>29 Oct 2019</td>
+                    <td class="action-buttons">
+                        <button class="action-btn"><img src="../Images/icons8-delete-30.png" alt="Delete"/></button>
+                        <button class="action-btn"><img src="../Images/icons8-edit-24.png" alt="Edit"/></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html> 
