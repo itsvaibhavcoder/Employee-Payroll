@@ -12,7 +12,7 @@
   <body>
     <header class="header-content header" id="headerID">
       <div class="logo-content">
-        <img src="../Images/logo.png" alt="" />
+        <img src="../assets/logo.png" alt="" />
         <div>
           <span class="emp-text"> EMPLOYEE </span>
           <br />
@@ -22,7 +22,7 @@
     </header>
 
     <div class="form-content">
-      <form class="form" action="#">
+      <form class="form" id="emp-form" action="#">
         <div class="form-head">Employee Payroll Form</div>
 
         <div class="row-content">
@@ -45,40 +45,40 @@
                 type="radio"
                 name="profile"
                 id="profile1"
-                value="../Images/profile1.png"
+                value="../assets/profile1.png"
                 required
               />
-              <img src="../Images/profile1.png" class="profile" alt="" />
+              <img src="../assets/profile1.png" class="profile" alt="" />
             </label>
             <label>
               <input
                 type="radio"
                 name="profile"
                 id="profile2"
-                value="../Images/profile2.png"
+                value="../assets/profile2.png"
                 required
               />
-              <img src="../Images/profile2.png" class="profile" alt="" />
+              <img src="../assets/profile2.png" class="profile" alt="" />
             </label>
             <label>
               <input
                 type="radio"
                 name="profile"
                 id="profile3"
-                value="../Images/profile3.png"
+                value="../assets/profile3.png"
                 required
               />
-              <img src="../Images/profile3.png" class="profile" alt="" />
+              <img src="../assets/profile3.png" class="profile" alt="" />
             </label>
             <label>
               <input
                 type="radio"
                 name="profile"
                 id="profile4"
-                value="../Images/profile4.png"
+                value="../assets/profile4.png"
                 required
               />
-              <img src="../Images/profile4.png" class="profile" alt="" />
+              <img src="../assets/profile4.png" class="profile" alt="" />
             </label>
           </div>
         </div>
@@ -158,6 +158,7 @@
           <label for="startDate" class="label text">Start Date</label>
           <div>
             <select name="day" id="day">
+              <option value="Day">Day</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -191,6 +192,7 @@
               <option value="31">31</option>
             </select>
             <select name="month" id="month">
+              <option value="Month">Month</option>
               <option value="Jan">January</option>
               <option value="Feb">February</option>
               <option value="March">March</option>
@@ -205,6 +207,7 @@
               <option value="Dec">December</option>
             </select>
             <select name="year" id="year">
+              <option value="Year">Year</option>
               <option value="2024">2024</option>
               <option value="2023">2023</option>
               <option value="2022">2022</option>
@@ -225,13 +228,12 @@
         </div>
 
         <div class="buttonParent">
-          <a class="button cancelButton">Cancel</a>
+          <button class="button cancelButton" id = "cancelBtn">Cancel</button>
           <div class="submit-reset">
             <button class="button submitButton" id="submitButton">
               Submit
             </button>
-            <button class="resetButton button">Reset</button>
-
+            <button class="button resetButton" id="resetButton">Reset</button>
           </div>
         </div>
       </form>
