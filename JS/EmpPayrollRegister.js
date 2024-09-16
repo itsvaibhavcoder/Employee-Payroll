@@ -9,7 +9,9 @@ const dayRef = document.getElementById("day");
 const monthRef = document.getElementById("month");
 const yearRef = document.getElementById("year");
 const notesRef = document.getElementById("notes");
-
+const cancelBtnRef = document.getElementById("cancelBtn");
+const resetBtnRef = document.getElementById("resetButton");
+const formRef = document.getElementById("emp-form");
 const namePattern = /^[a-zA-Z\s'-]{3,}$/;
 
 function validateName(name){
@@ -23,6 +25,27 @@ function validateName(name){
         return true;
     }
 }
+
+function clearForm() {
+    const formElements = formRef.elements;
+    for (let i = 0; i < formElements.length; i++) {
+        const field = formElements[i];
+
+        if (field.type === "text" || field.type === "password" || field.tagName === "TEXTAREA") {
+            field.value = "";
+        }
+
+        else if (field.type === "radio" || field.type === "checkbox") {
+            field.checked = false;
+        }
+
+        else if (field.tagName === "SELECT") {
+            field.selectedIndex = 0;
+        }
+    }
+    nameErrorRef.style.display = "none";
+}
+
 
 submitBtnRef.addEventListener("click", (e) => {
     e.preventDefault();
@@ -74,6 +97,15 @@ submitBtnRef.addEventListener("click", (e) => {
   else {
     localStorage.setItem("empDataList", JSON.stringify([empDataObj]));
   }
+  clearForm();
+});
 
-  console.log("Employee Data saved: ", empDataObj);
+cancelBtnRef.addEventListener("click", (e)=>{
+    e.preventDefault();
+    clearForm();
+})
+
+resetBtnRef.addEventListener("click", (e)=>{
+    e.preventDefault();
+    clearForm();
 })
