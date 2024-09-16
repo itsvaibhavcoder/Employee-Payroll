@@ -107,7 +107,9 @@ label {
   border-radius: 4px;
   resize: vertical;
 }
-
+#salary{
+  width: 39%;
+}
 .error-message{
   color: red;
   display: none;
@@ -130,8 +132,10 @@ label {
   border-radius: 50%;
   margin-left: 12px;
 }
-.submit-reset{
 
+.submit-reset{
+  display: flex;
+  justify-content: space-between;
 }
 
 select {
@@ -178,7 +182,6 @@ select {
   border: 1px solid #707070;
   border-radius: 5px;
   background-color: #f5f5f5;
-  margin-right: 30px;
 }
 
 .cancelButton {
