@@ -79,6 +79,15 @@ body {
     text-decoration: none;
 }
 
+.searchIcon{
+    height: 30px;
+    margin-right: 16px;
+}
+.searchAddUser-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .table-main {
     width: 80%;
     margin: 0 auto;
@@ -103,12 +112,14 @@ thead {
 .action-buttons {
     display: flex; 
     gap: 10px; 
+    margin-left: 20px;
 }
 
 .action-btn {
     width: 40px;
     height: 40px; 
     padding: 5px; 
+    margin-bottom: 5px;
     background-color: transparent; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
@@ -149,7 +160,7 @@ td {
 .dept-label {
     background-color: #e9fea5;
     border-radius: 40%;
-    padding: 1px 7px;
+    padding: 5px 7px;
     font-size: 14px;
     margin-bottom: 8px;
 } 
@@ -157,13 +168,15 @@ td {
 
 .emp-img {
     border-radius: 50%;
-    height: 40px;
+    height: 37px;
     width: 40px;
     margin-left: 10px;
+    margin-right: 5px;
 }
 
 .emp-info {
     display: flex;
     align-items: center;
     vertical-align: middle;
+    padding: 2px;
 }
