@@ -78,10 +78,21 @@ body {
     padding: 5px 18px;
     text-decoration: none;
 }
-
+.search{
+    border: 1px solid gray;
+    padding: 5px;
+    margin-left: 2px;
+    border-radius: 5px;
+}
+.searchBar{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
 .searchIcon{
     height: 30px;
     margin-right: 16px;
+    margin-left: 9px;
 }
 .searchAddUser-cnt{
     display: flex;
