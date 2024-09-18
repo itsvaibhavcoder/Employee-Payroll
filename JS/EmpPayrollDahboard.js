@@ -1,5 +1,17 @@
 $(document).ready(function () {
     fetchAndDisplayEmployees();
+
+    // Search button click event
+    $('#search-button').on('click', function () {
+        const inputText = $('#search-input').val().trim().toLowerCase();
+        searchEmployeeByName(inputText); // Call the search function when search button is clicked
+    });
+
+    // Optionally: Trigger search on keyup 
+    // $('#search-input').on('keyup', function () {
+    //     const inputText = $(this).val().trim().toLowerCase();
+    //     searchEmployeeByName(inputText); // Call the search function on keyup
+    // });
 });
 
 function fetchAndDisplayEmployees() {
@@ -15,6 +27,28 @@ function fetchAndDisplayEmployees() {
     });
 }
 
+function searchEmployeeByName(inputText) {
+    $.ajax({
+        url: 'http://localhost:3000/employees',
+        method: 'GET',
+        success: function (data) {
+            if (!inputText) {
+                populateEmployeeTable(data); 
+                return;
+            }
+
+            const filteredEmployees = data.filter(function (employee) {
+                return employee.name.toLowerCase().includes(inputText);
+            });
+            populateEmployeeTable(filteredEmployees);
+        },
+        error: function (xhr, status, error) {
+            console.error('Error fetching employees:', error);
+        }
+    });
+}
+
+
 function populateEmployeeTable(employees) {
     const $tableBody = $('#display tbody');
     $tableBody.empty(); 
@@ -25,8 +59,8 @@ function populateEmployeeTable(employees) {
     });
 }
 
-function createEmployeeRow(employee) {
 
+function createEmployeeRow(employee) {
     let departmentLabels = '';
     employee.departments.forEach(function (dept) {
         departmentLabels += `<span class="dept-label">${dept}</span>`;
@@ -35,7 +69,7 @@ function createEmployeeRow(employee) {
     let formattedDate = employee.startDate;
 
     const $row = `
-        <tr>
+        <tr id="row-${employee.id}">
             <td class="emp-info">
                 <img src="${employee.profile}" alt="Employee" class="emp-img" />
                 <span>${employee.name}</span>
@@ -45,8 +79,8 @@ function createEmployeeRow(employee) {
             <td>₹ ${employee.salary}</td>
             <td>${formattedDate}</td>
             <td class="action-buttons">
-                <button onclick = "deleteEmployee('${employee.id}')" class="action-btn"><img src="../assets/icons8-delete-30.png" alt="Delete"/></button>
-                <button onclick = "editEmployee('${employee.id}')" class="action-btn"><img src="../assets/icons8-edit-24.png" alt="Edit"/></button>
+                <button onclick="deleteEmployee('${employee.id}')" class="action-btn"><img src="../assets/icons8-delete-30.png" alt="Delete"/></button>
+                <button onclick="editEmployee('${employee.id}')" class="action-btn"><img src="../assets/icons8-edit-24.png" alt="Edit"/></button>
             </td>
         </tr>
     `;
@@ -59,7 +93,6 @@ function deleteEmployee(id) {
         url: `http://localhost:3000/employees/${id}`,
         method: 'DELETE',
         success: function () {
-            // Remove the row from the table
             $(`#row-${id}`).remove();
             console.log(`Employee with ID ${id} deleted successfully.`);
             refreshPage();
@@ -70,12 +103,11 @@ function deleteEmployee(id) {
     });
 }
 
-function editEmployee(id){
+function editEmployee(id) {
     localStorage.setItem('editEmployeeId', id);
-    // window.location.href = './EmpPayrollRegister.html';
+    window.location.href = './EmpPayrollRegister.html';
 }
 
 function refreshPage() {
     location.reload();
 }
-
