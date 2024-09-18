@@ -1,4 +1,11 @@
 const namePattern = /^[a-zA-Z\s'-]{3,}$/;
+('editEmployeeId');
+$(document).ready(function () {
+    //fetchAndDisplayEmployees();
+    //Check inside the ls edit data is there or not 
+    // If it is there set input field value using that data
+});
+
 
 function validateName(name) {
     if (!namePattern.test(name)) {
@@ -46,28 +53,22 @@ $("#submitButton").on("click", function (e) {
         startDate: selectedStartDate,
         notes: notesVal,
     };
-
-    fetch("http://localhost:3000/employees", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+    
+    //Check if you have data present in lS if it there instead post call put api and clear the LS else do post part
+    $.ajax({
+        url: "http://localhost:3000/employees",
+        type: "POST", 
+        contentType: "application/json", 
+        data: JSON.stringify(empDataObj),
+        success: function (data) {
+            alert("Employee added successfully!");
+            clearForm(); 
+            //window.location.href = 'Pages/EmpPayrollDahboard.html';
         },
-        body: JSON.stringify(empDataObj),
-      })
-      .then((response)=>{
-        if (!response.ok) {
-            throw new Error("Network response was not OK");
-          }
-          return response.json();
-      })
-      .then((data)=>{
-        alert("Employee added successfully!");
-        empForm[0].reset();
-      })
-      .catch((error)=>{
-        console.error("Error adding employee:", error);
-      });
-    clearForm();
+        error: function (xhr, status, error) {
+            console.error("Error adding employee:", error);
+        }
+    });
 });
 
 $("#cancelBtn, #resetButton").on("click", function (e) {

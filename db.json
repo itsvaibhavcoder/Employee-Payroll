@@ -1,16 +1,88 @@
 {
   "employees": [
     {
-      "id": "27ab",
-      "name": "Vaibhav",
+      "id": "98de",
+      "name": "vaibhav",
       "profile": "../assets/profile4.png",
       "gender": "male",
       "departments": [
-        "Sales"
+        "Engineer"
+      ],
+      "salary": "3000000",
+      "startDate": "21-Dec-2022",
+      "notes": "hiii"
+    },
+    {
+      "id": "7ac9",
+      "name": "Rushikesh",
+      "profile": "../assets/profile4.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
+      ],
+      "salary": "3000000",
+      "startDate": "14-Aug-2024",
+      "notes": "Hiiii"
+    },
+    {
+      "id": "061b",
+      "name": "Rushikesh Sarode",
+      "profile": "../assets/profile3.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
       ],
       "salary": "1000000",
-      "startDate": "17-Oct-2023",
-      "notes": "Hiiiiiiiiii"
+      "startDate": "18-Nov-2023",
+      "notes": "Software developer in KPIT."
+    },
+    {
+      "id": "4b3a",
+      "name": "Kaustubh Kongile",
+      "profile": "../assets/profile4.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
+      ],
+      "salary": "3000000",
+      "startDate": "14-Oct-2022",
+      "notes": "Kaustubh is Software developer in KPIT"
+    },
+    {
+      "id": "c2a9",
+      "name": "Devendra Wagh",
+      "profile": "../assets/profile4.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
+      ],
+      "salary": "3000000",
+      "startDate": "13-July-2024",
+      "notes": "Devendra is SDE at Accenture."
+    },
+    {
+      "id": "425a",
+      "name": "Kshitij Jagtap",
+      "profile": "../assets/profile4.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
+      ],
+      "salary": "2000000",
+      "startDate": "9-July-2022",
+      "notes": "Kshitij is SDE at TCS"
+    },
+    {
+      "id": "1cbe",
+      "name": "Utkarsh Jaulkar",
+      "profile": "../assets/profile4.png",
+      "gender": "male",
+      "departments": [
+        "Engineer"
+      ],
+      "salary": "2000000",
+      "startDate": "12-Oct-2022",
+      "notes": "Utkarsh SDE at Tresvista"
     }
   ]
 }
