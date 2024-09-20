@@ -1,16 +1,16 @@
 {
   "employees": [
     {
+      "id": "7d9e",
       "name": "Vaibhav Sukale",
       "profile": "../assets/profile4.png",
-      "gender": "",
+      "gender": "male",
       "departments": [
         "Engineer"
       ],
-      "salary": "400000",
-      "startDate": "27-June-2024",
-      "notes": "Vaibhav is FullStack Developer.",
-      "id": "cfd5"
+      "salary": "5000000",
+      "startDate": "16-Nov-2023",
+      "notes": "I am SDE "
     }
   ]
 }
