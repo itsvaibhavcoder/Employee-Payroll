@@ -192,3 +192,109 @@ select {
   background-color: #f5f5f5;
   margin-right: 30px;
 }
+
+@media (max-width: 932px) {
+  .form {
+      width: 70%; 
+  }
+ .row-content{
+  margin-bottom: 0px;
+ }
+  .profile {
+      width: 20px; 
+      margin-left: 5px;
+  }
+ .buttonParent{
+  flex-direction: column;
+  padding: 5px;
+ }
+  
+  #salary {
+      width: 50%; 
+  }
+
+  .button {
+      font-size: 10px; 
+      padding: 10px; 
+  }
+  .cancelButton{
+    margin-bottom: 5px;
+  }
+  .input{
+    padding: 7px;
+    margin-top: 4px;
+  }
+  .submitButton, .resetButton, .cancelButton {
+      margin-right: 10px;
+  }
+
+  .logo-content {
+      margin-left: 20px;
+  }
+}
+
+@media (max-width: 536px) {
+  .form {
+    background-color: white;
+  }
+  .form-content{
+    height: 110%;
+    background-color: white;
+  }
+  .form-head{
+    padding-bottom: 0px;
+    margin-top: 5px;
+  }
+  select{
+    padding: 7px;
+  }
+ .row-content{
+  flex-direction: column;
+  align-items: flex-start;
+ }
+
+ .buttonParent{
+  padding: 0px;
+  margin-top: 7px;
+ }
+  
+  .button {
+    padding: 7px;
+  }
+  .input{
+    padding: 4px;
+  }
+  .label{
+    min-width: 100px;
+  }
+}
+
+
+@media (max-width: 440px) {
+  .form-content{
+    height: 116%;
+  }
+  .buttonParent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+
+  .submit-reset {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitButton,
+  .resetButton,
+  .cancelButton {
+    width: 100%; 
+    max-width: 200px; 
+  }
+}
