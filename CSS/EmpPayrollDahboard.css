@@ -219,3 +219,9 @@ td {
     height: 30px;
   }
 }
+
+@media (max-width: 722px){
+  .table{
+    font-size: 14px;
+  }
+}
