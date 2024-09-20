@@ -1,17 +1,10 @@
 $(document).ready(function () {
     fetchAndDisplayEmployees();
 
-    // Search button click event
     $('#search-button').on('click', function () {
         const inputText = $('#search-input').val().trim().toLowerCase();
-        searchEmployeeByName(inputText); // Call the search function when search button is clicked
+        searchEmployeeByName(inputText);
     });
-
-    // Optionally: Trigger search on keyup 
-    // $('#search-input').on('keyup', function () {
-    //     const inputText = $(this).val().trim().toLowerCase();
-    //     searchEmployeeByName(inputText); // Call the search function on keyup
-    // });
 });
 
 function fetchAndDisplayEmployees() {
