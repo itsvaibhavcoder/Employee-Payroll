@@ -272,7 +272,7 @@ select {
 
 @media (max-width: 440px) {
   .form-content{
-    height: 116%;
+    height: 92%;
   }
   .buttonParent {
     flex-direction: column;
@@ -296,5 +296,12 @@ select {
   .cancelButton {
     width: 100%; 
     max-width: 200px; 
+  }
+}
+
+
+@media (max-width: 376px){
+  .form-content{
+    height: 115%;
   }
 }
